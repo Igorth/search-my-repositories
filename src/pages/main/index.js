@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 export default class Main extends Component {
@@ -27,7 +28,7 @@ export default class Main extends Component {
                 {repositories.map(repo => (
                     <article key={repo.id}>
                         <strong>{repo.name}</strong>
-                        <a href="#">Acessar</a>
+                        <Link to={`repos/${repo.id}`}>Acessar</Link>
                     </article>
                 ))}
             </div>
