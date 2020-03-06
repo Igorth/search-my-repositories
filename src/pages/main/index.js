@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
+import './styles.css';
 
 export default class Main extends Component {
     state = {
@@ -18,13 +19,18 @@ export default class Main extends Component {
         console.log(response.data);
     };
 
-    render(){
-    return (
-        <div className="repo-list">
-            {this.state.repositories.map(repo => (
-                <h2 key={repo.id}>{repo.name}</h2>
-            ))}
-        </div>
-    )
+    render() {
+        const { repositories } = this.state;
+
+        return (
+            <div className="repo-list">
+                {repositories.map(repo => (
+                    <article key={repo.id}>
+                        <strong>{repo.name}</strong>
+                        <a href="#">Acessar</a>
+                    </article>
+                ))}
+            </div>
+        )
     }
 }
