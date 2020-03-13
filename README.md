@@ -1,6 +1,7 @@
 # Search Git Repositories
 
-Using React I can get information of my repository in GitHub
+Using React I can get information of my repository in GitHub. Learning
+how to use API and routes.
 
 ## Contributing
 
